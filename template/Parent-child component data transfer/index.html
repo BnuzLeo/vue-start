@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parent-child component data transfer</title>
+	<script src="../../libs/vue.js"></script>
+	<link rel="stylesheet" href="../../libs/bootstrap-4.2.1-dist/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container" id="root">
+	  <div class="row">
+	    <h1>Parent-child component data transfer</h1>
+	  </div>
+	  <div class="row">
+	  	<counter ref='counter1' :count="1" @inc="handleInc"></counter>
+	  </div>
+	  <div class="row">
+	  	<counter ref='counter2' :count="2" @inc="handleInc"></counter>
+	  </div>
+	  <div class="row">
+	  	<div class="alert alert-success" role="alert" style='width: 100%'>
+  			Total : {{total}}
+		</div>
+	  </div>
+	</div>
+	<script>
+		var counter = {
+			props:['count'],
+			data: function(){
+				return {
+					num: this.count,
+					step: 2
+				}
+			},
+			template: '<div @click="handleClick" class="alert alert-primary" role="alert" style="width: 100%">Click and the number will increase : [{{num}}]</div>',
+			methods: {
+				handleClick: function(){
+					this.num = this.num + this.step
+					this.$emit('inc', this.step)
+				}
+			}
+		}
+
+		var vm = new Vue({
+			el: '#root',
+			data:{
+				total : 3
+			},
+			components:{
+				counter: counter
+			},
+			methods: {
+				handleInc:function(step){
+					this.total += step
+				}
+			}
+		})
+	</script>
+</body>
+</html>
