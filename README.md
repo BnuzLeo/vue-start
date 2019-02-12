@@ -15,5 +15,5 @@ The notes of study Vue, share to all
 [代码](https://github.com/BnuzLeo/vue-start/blob/master/template/validation_and_props/validation.html)
 [笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/validation_and_props/validation.md)
 - template绑定原生事件
-[代码]()
-[笔记]()
+[代码](https://github.com/BnuzLeo/vue-start/blob/master/template/native_event/native_event.html)
+[笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/native_event/native_event.md)
