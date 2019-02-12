@@ -17,3 +17,19 @@
 props: ['content'],
 template:'<div>{{content}}</div>'
 ```
+
+## Props特性
+- Dom不显示
+```html
+<child content="Hello props"></child>
+```
+ps：一旦子子组件使用props来接收属性，在html里面显示是：
+```html
+<child></child>
+```
+- 子组件可以使用
+```
+props: ['content'],
+template:'<div>{{content}}</div>'
+```
+ps: props接收之后，就可以在子组件中使用啦
