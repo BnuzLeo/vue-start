@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../../libs/vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		<child content="Hello props"></child>
+	</div>
+
+	<script>
+		var child = {
+			props: ['content'],
+			template: '<div>{{content}}</div>'
+		}
+
+		var vm = new Vue({
+			el: '#root',
+			components:{
+				child: child
+			}
+		})
+	</script>
+</body>
+</html>
