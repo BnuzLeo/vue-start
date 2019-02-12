@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Parent-child component data transfer</title>
+	<script src="../../libs/vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		<ref ref="introduction"></ref>
+		<button @click="btnClick">copy</button>
+		<div>{{copyContent}}</div>
+	</div>
+	<script>
+		Vue.component('ref',{
+			data: function(){
+				return {
+					content: 'Hi, I am Leon'
+				}
+			},
+			template: '<div>{{content}}</div>'
+		})
+
+		var vm = new Vue({
+			el: '#root',
+			data: {
+				copyContent: ''
+			},
+			methods: {
+				btnClick: function(){
+					this.copyContent = this.$refs.introduction.content
+				}
+			}
+		})
+	</script>
+</body>
+</html>
