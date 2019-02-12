@@ -1,7 +1,7 @@
 # PROPS
 
 ## 例子
-- 参考代码：[code]()
+- 参考代码：[code](https://github.com/BnuzLeo/vue-start/blob/master/template/validation_and_props/props.html)
 - 实现功能：
 ```text
 通过属性给模板赋值

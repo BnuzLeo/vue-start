@@ -1,7 +1,7 @@
 # PROPS
 
 ## 例子
-- 参考代码：[code]()
+- 参考代码：[code](https://github.com/BnuzLeo/vue-start/blob/master/template/validation_and_props/validation.html)
 - 实现功能：
 ```text
 poc各种props的validation的用法

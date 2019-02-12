@@ -14,3 +14,6 @@ The notes of study Vue, share to all
 - props的校验
 [代码](https://github.com/BnuzLeo/vue-start/blob/master/template/validation_and_props/validation.html)
 [笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/validation_and_props/validation.md)
+- template绑定原生事件
+[代码]()
+[笔记]()
