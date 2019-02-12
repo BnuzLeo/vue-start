@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Parent-child component data transfer</title>
+	<script src="../../libs/vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		<table>
+			<tbody>
+				<row></row>
+				<td is='row'></td>
+			</tbody>
+		</table>
+	</div>
+	<script>
+		Vue.component('row',{
+			data: function(){
+				return {
+					content: 'Hi, I am Leon'
+				}
+			},
+			template: '<tr><td>{{content}}</td></tr>'
+		})
+		var vm = new Vue({
+			el: '#root'
+		})
+	</script>
+</body>
+</html>
