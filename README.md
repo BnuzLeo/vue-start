@@ -8,3 +8,9 @@ The notes of study Vue, share to all
 - $refs的使用
 [代码](https://github.com/BnuzLeo/vue-start/blob/master/template/template_base/tempalte_refs.html)
 [笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/template_base/template_base.md)
+- props的使用
+[代码](https://github.com/BnuzLeo/vue-start/blob/master/template/validation_and_props/props.html)
+[笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/validation_and_props/props.md)
+- props的校验
+[代码](https://github.com/BnuzLeo/vue-start/blob/master/template/validation_and_props/validation.html)
+[笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/validation_and_props/validation.md)
