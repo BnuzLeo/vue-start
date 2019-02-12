@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../../libs/vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		<valid-one content="Hello validation one"></valid-one>
+		<valid-two :content="2"></valid-two>
+		<valid-three content="Hello validation three"></valid-three>
+		<valid-four :content="{'object':'1'}"></valid-four>
+		<valid-five></valid-five>
+	</div>
+
+	<script>
+		var validOne = {
+			props: ['content'],
+			template: '<div>{{content}}</div>'
+		}
+
+		var validTwo = {
+			props: {
+				content : String
+			},
+			template: '<div>{{content}}</div>'
+		}
+
+		var validThree = {
+			props: {
+				content : Number
+			},
+			template: '<div>{{content}}</div>'
+		}
+
+		var validFour = {
+			props: {
+				content : [String, Number]
+			},
+			template: '<div>{{content}}</div>'
+		}
+
+		var validFive = {
+			props:{
+				content : {
+					type : String,
+					required : false,//是否必须
+					default : 'Hello validation five',//默认值
+					validator: function(value){//自定义validator
+						return (value.length < 5)
+					}
+				}
+			},
+			template: '<div>{{content}}</div>'
+		}
+
+		var vm = new Vue({
+			el: '#root',
+			components:{
+				validOne: validOne,
+				validTwo: validTwo,
+				validThree: validThree,
+				validFour: validFour,
+				validFive: validFive
+			}
+		})
+	</script>
+</body>
+</html>
