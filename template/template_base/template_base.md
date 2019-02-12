@@ -1,5 +1,12 @@
 # TEMPLATE BASE
 
+## 例子
+- 参考代码：[code](https://github.com/BnuzLeo/vue-start/blob/master/template/template_base/template_base.html)
+- 实现功能
+```text
+自定义模板并且使用
+```
+
 ## Template的声明与使用
 - 声明
 ```js

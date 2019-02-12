@@ -1,7 +1,7 @@
 # TEMPLATE REFS
 
 ## 例子
-- 参考代码：[code]()
+- 参考代码：[code](https://github.com/BnuzLeo/vue-start/blob/master/template/template_base/tempalte_refs.html)
 - 实现功能
 ```text
 点击Copy按钮，复制 'Hi, I am Leon'
