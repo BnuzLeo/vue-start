@@ -1,7 +1,7 @@
 # SLOT SCOPE
 
 ## 例子
-- 参考代码：[code](https://github.com/BnuzLeo/vue-start/blob/master/template/scope_slot/scope_slot.html)
+- 参考代码：[code](https://github.com/BnuzLeo/vue-start/blob/master/template/slot/scope_slot.html)
 - 实现功能：
 ```text
 由父组件决定子组件中循环的模式，使用"作用域卡槽"实现
