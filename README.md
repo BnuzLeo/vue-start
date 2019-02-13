@@ -23,3 +23,6 @@ The notes of study Vue, share to all
 - 组件插槽的使用（slot）
 [代码](https://github.com/BnuzLeo/vue-start/blob/master/template/slot/slot.html)
 [笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/slot/slot.md)
+- 作用域插槽的使用（slot-scope）
+[代码](https://github.com/BnuzLeo/vue-start/blob/master/template/slot/slot.html)
+[笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/slot/slot.md)

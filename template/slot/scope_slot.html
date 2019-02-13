@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作用域插槽的使用</title>
+	<script src="../../libs/vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		<child>
+			<template slot-scope="props">
+				<li>{{props.item.id}} - {{props.item.name}}</li>
+			</template>
+		</child>
+	</div>
+
+	<script>
+		Vue.component('child',{
+			data:function(){
+				return{
+					list:[
+						{
+							id:1,
+							name:"Leon"
+						},{
+							id:2,
+							name:"Yannis"
+						}
+					]
+				}
+			},
+			template: 
+			`
+				<div>
+					<ul>
+						<slot v-for="item of list" :item="item"></slot>
+					</ul>
+				</div>
+			`
+		})
+
+		var vm = new Vue({
+			el: '#root'
+		})
+	</script>
+</body>
+</html>
