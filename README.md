@@ -20,3 +20,6 @@ The notes of study Vue, share to all
 - 非父子组件的传值
 [代码](https://github.com/BnuzLeo/vue-start/blob/master/template/non_parent_child_components_data_transfer/bus.html)
 [笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/non_parent_child_components_data_transfer/bus.md)
+- 组件插槽的使用（slot）
+[代码](https://github.com/BnuzLeo/vue-start/blob/master/template/slot/slot.html)
+[笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/slot/slot.md)

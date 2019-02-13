@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>组件插槽的使用</title>
+	<script src="../../libs/vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		<child-one content = '<p>Slot</p>'></child-one>
+		<child-two>
+			<p>Slot</p>
+		</child-two>
+		<child-three>
+			<div slot="header">Header</div>
+			<div slot="footer">Footer</div>
+		</child-three>
+	</div>
+
+	<script>
+		var childOne = {
+			props:['content'],
+			template: `<div>Hello <div v-html="this.content"></div></div>`
+		}
+
+		var childTwo = {
+			template: '<div>Hello<slot></slot></div>'
+		}
+
+		var childThree = {
+			template: '<div><slot name="header"></slot>Hello<slot name="footer"></slot></div>'
+		}
+
+		var vm = new Vue({
+			el: '#root',
+			components: {
+				childOne: childOne,
+				childTwo: childTwo,
+				childThree: childThree
+			}
+		})
+	</script>
+</body>
+</html>
