@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>非父子组件传值</title>
+	<script src="../../libs/vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		<child content="Bnuz"></child>
+		<child content="Leon"></child>
+	</div>
+
+	<script>
+
+		Vue.prototype.bus = new Vue()
+
+		Vue.component('child',{
+			props:{
+				content: String
+			},
+			data: function(){
+				return {
+					self: this.content
+				}
+			},
+			template: '<div @click="handleClick">{{self}}</div>',
+			methods: {
+				handleClick: function(){
+					this.bus.$emit('change', this.self)
+				}
+			},
+			mounted: function(){
+				var me = this
+				this.bus.$on('change',function(msg){
+					me.self = msg
+				})
+			}
+
+		})
+
+		var vm = new Vue({
+			el: '#root'
+		})
+	</script>
+</body>
+</html>

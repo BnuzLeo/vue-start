@@ -17,3 +17,6 @@ The notes of study Vue, share to all
 - template绑定原生事件
 [代码](https://github.com/BnuzLeo/vue-start/blob/master/template/native_event/native_event.html)
 [笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/native_event/native_event.md)
+- 非父子组件的传值
+[代码](https://github.com/BnuzLeo/vue-start/blob/master/template/non_parent_child_components_data_transfer/bus.html)
+[笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/non_parent_child_components_data_transfer/bus.md)
