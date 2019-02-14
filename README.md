@@ -1,5 +1,10 @@
 # vue-start
-The notes of study Vue, share to all
+
+## 前言
+```
+学习Vue的笔记，之后会持续更新
+```
+
 
 ## TEMPLATE
 - Template的基础使用
