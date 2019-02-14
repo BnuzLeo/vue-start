@@ -32,7 +32,7 @@
 [代码](https://github.com/BnuzLeo/vue-start/blob/master/template/slot/slot.html)
 [笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/slot/slot.md)
 - 动态组件（Dynamic components）
-[代码](https://github.com/BnuzLeo/vue-start/blob/master/template/dynamic_component_and_v-once/dunamic.html)
+[代码](https://github.com/BnuzLeo/vue-start/blob/master/template/dynamic_component_and_v-once/dynamic.html)
 [笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/dynamic_component_and_v-once/dynamic_component_and_v-once.md)
 - v-once指令
 [代码](https://github.com/BnuzLeo/vue-start/blob/master/template/dynamic_component_and_v-once/v-once.html)

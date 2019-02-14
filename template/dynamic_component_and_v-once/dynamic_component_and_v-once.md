@@ -1,7 +1,7 @@
 # PROPS
 
 ## 例子
-- 动态组件：[code](https://github.com/BnuzLeo/vue-start/blob/master/template/dynamic_component_and_v-once/dunamic.html)
+- 动态组件：[code](https://github.com/BnuzLeo/vue-start/blob/master/template/dynamic_component_and_v-once/dynamic.html)
 - v-once指令： [code](https://github.com/BnuzLeo/vue-start/blob/master/template/dynamic_component_and_v-once/v-once.html)
 - 实现功能：
 ```text
