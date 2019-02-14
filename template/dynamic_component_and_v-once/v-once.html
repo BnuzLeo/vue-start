@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动态组件</title>
+	<script src="../../libs/vue.js"></script>
+</head>
+<body>
+
+	<div id="root">
+		<child-one v-if="type === 'child-one'"></child-one>
+		<child-two v-if="type === 'child-two'"></child-two>
+		<button @click="handleClick">Change component</button>
+	</div>
+
+	<script>
+		Vue.component('child-one',{
+			template: '<div v-once>child-one</div>',
+			mounted:function(){
+				console.log('child-one created');
+			}
+		})
+
+		Vue.component('child-two',{
+			template: '<div v-once>child-two</div>',
+			mounted:function(){
+				console.log('child-two created');
+			}
+		})
+
+		var vm = new Vue({
+			el: '#root',
+			data:{
+				type: 'child-one'
+			},
+			methods: {
+				handleClick: function(){
+					this.type = this.type === 'child-one' ? 'child-two' : 'child-one';
+				}
+			}
+
+		})
+	</script>
+</body>
+</html>
