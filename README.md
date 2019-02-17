@@ -54,3 +54,6 @@
 - 列表过渡
 [代码](https://github.com/BnuzLeo/vue-start/blob/master/animation/list_transition/list_transition.html)
 [笔记](https://github.com/BnuzLeo/vue-start/blob/master/animation/list_transition/list_transition.md)
+- 封装过渡组件
+[代码](https://github.com/BnuzLeo/vue-start/blob/master/animation/package/package.html)
+[笔记](https://github.com/BnuzLeo/vue-start/blob/master/animation/package/package.md)
