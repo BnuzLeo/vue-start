@@ -5,6 +5,7 @@
 	<title>Vue中css的动画原理</title>
 	<script src="../../libs/vue.js"></script>
 	<style>
+		/* 默认过渡类名 */
 		.fade-enter,
 		.fade-leave-to{
 			opacity: 0;
@@ -14,11 +15,30 @@
 		.fade-leave-active{
 			transition: opacity 1s;
 		}
+
+		/* 自定义过渡类名
+		 */
+		.c-enter,
+		.c-leave-to{
+			opacity: 0;
+		}
+		.c-active,
+		.c-leave{
+			transition: opacity 1s;
+		}
+	
 	</style>
 </head>
 <body>
 	<div id="root">
 		<transition name="fade">
+			<div v-show="show">Hello Animation</div>
+		</transition>
+		<transition name="custom" 
+		enter-active-class="c-active" 
+		leave-active-class="c-leave" 
+		enter-class="c-enter"
+		leave-to-class="c-leave-to">
 			<div v-show="show">Hello Animation</div>
 		</transition>
 		<button @click='handleClick'>Trigger</button>
