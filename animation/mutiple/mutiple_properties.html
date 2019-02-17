@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多个元素的过渡</title>
+	<script src="../../libs/vue.js"></script>
+
+	<style>
+		.v-enter{
+			opacity: 0;
+		}
+
+		.v-enter-active{
+			transition: opacity 2s
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<transition mode="out-in">
+		  <button v-if="isEditing" key="save" @click="clickSave">
+		    Save
+		  </button>
+		  <button v-else key="edit" @click="clickEdit">
+		    Edit
+		  </button>
+		</transition>
+	</div>
+
+	<script>
+		var vm = new Vue({
+			el: '#root',
+			data: {
+				isEditing: true
+			},
+			methods: {
+				clickSave: function(){
+					this.isEditing = false;
+				},
+				clickEdit: function(){
+					this.isEditing = true;
+				}
+			}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多个元素的过渡</title>
+	<script src="../../libs/vue.js"></script>
+
+	<style>
+		.v-enter{
+			opacity: 0;
+		}
+
+		.v-enter-active{
+			transition: opacity 2s
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<transition mode="out-in">
+		  <btn-one v-if="isEditing"></btn-one>
+		  <btn-two v-else></btn-two>
+		</transition>
+		<transition mode="out-in">
+		  <component :is="component"></component>
+		</transition>
+		<button @click="handleClick">Change</button>
+	</div>
+
+	<script>
+		Vue.component('btn-one',{
+			template:"<button>btn-one</button>"
+		})
+
+		Vue.component('btn-two',{
+			template:"<button>btn-two</buttonbutton>"	
+		})
+
+		var vm = new Vue({
+			el: '#root',
+			data: {
+				isEditing: true,
+				component: 'btn-one'
+			},
+			methods: {
+				handleClick: function(){
+					this.isEditing = !this.isEditing
+					this.component = this.component == 'btn-one' ? 'btn-two' : 'btn-one'
+				}
+			}
+		})
+	</script>
+</body>
+</html>
