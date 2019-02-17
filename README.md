@@ -6,7 +6,7 @@
 ```
 
 
-## TEMPLATE
+## 组件
 - Template的基础使用
 [代码](https://github.com/BnuzLeo/vue-start/blob/master/template/template_base/template_base.html)
 [笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/template_base/template_base.md)
@@ -37,3 +37,8 @@
 - v-once指令
 [代码](https://github.com/BnuzLeo/vue-start/blob/master/template/dynamic_component_and_v-once/v-once.html)
 [笔记](https://github.com/BnuzLeo/vue-start/blob/master/template/dynamic_component_and_v-once/dynamic_component_and_v-once.md)
+
+## 动画
+- Vue css动画原理
+[代码](https://github.com/BnuzLeo/vue-start/blob/master/animation/basic/basic.html)
+[笔记](https://github.com/BnuzLeo/vue-start/blob/master/animation/basic/basic.md)
