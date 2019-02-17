@@ -43,7 +43,7 @@ var vm = new Vue({
 ```
 
 ## 原理
-- ![原理](https://github.com/BnuzLeo/vue-start/blob/master/animation/basic/principle.png)
+![原理](https://github.com/BnuzLeo/vue-start/blob/master/animation/basic/principle.png)
 
 - 原理
 ```
