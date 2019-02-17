@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue的JS动画以及velocityjs</title>
+	<script src="../../libs/vue.js"></script>
+	<script src="../../libs/velocity.min.js"></script>
+</head>
+<body>
+	<div id="root">
+		<transition 
+		mode="out-in"
+		@before-enter="beforeEnter",
+		@enter="enter",
+		@after-enter="afterEnter">
+			<div v-if="show">Hello Velocity</div>
+		</transition>
+		<button @click="handleClick">Change</button>
+	</div>
+
+	<script>
+		var vm = new Vue({
+			el:'#root',
+			data: {
+				show: true
+			},
+			methods: {
+				handleClick: function(){
+					this.show = !this.show
+				},
+				beforeEnter: function(el){
+					el.style.opacity = 0;
+				},
+				enter: function(el,done){
+					Velocity(
+						el, 
+						{opacity:1}, 
+						{duration: 1000, complete: done}
+						/*complete是Velocity要求的参数*/
+					)
+				},
+				afterEnter: function(el){
+					alert("Complete")
+				}
+			}
+		})
+	</script>
+</body>
+</html>

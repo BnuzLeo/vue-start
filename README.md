@@ -45,6 +45,12 @@
 - 初始渲染的过渡
 [代码](https://github.com/BnuzLeo/vue-start/blob/master/animation/initialized/initialized.html)
 [笔记](https://github.com/BnuzLeo/vue-start/blob/master/animation/initialized/initialized.md)
+- Vue的JS动画以及velocityjs的使用
+[代码](https://github.com/BnuzLeo/vue-start/blob/master/animation/velocityjs/velocityjs.html)
+[笔记](https://github.com/BnuzLeo/vue-start/blob/master/animation/velocityjs/velocityjs.md)
+- Vue的css动画以及animate.css的使用
+[代码](https://github.com/BnuzLeo/vue-start/blob/master/animation/animatecss/animatecss.html)
+[笔记](https://github.com/BnuzLeo/vue-start/blob/master/animation/animatecss/animatecss.md)
 - 多个元素过渡
 [代码](https://github.com/BnuzLeo/vue-start/blob/master/animation/mutiple/mutiple_properties.html)
 [笔记](https://github.com/BnuzLeo/vue-start/blob/master/animation/mutiple/mutiple.md)
