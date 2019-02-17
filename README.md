@@ -42,3 +42,12 @@
 - Vue css动画原理
 [代码](https://github.com/BnuzLeo/vue-start/blob/master/animation/basic/basic.html)
 [笔记](https://github.com/BnuzLeo/vue-start/blob/master/animation/basic/basic.md)
+- 初始渲染的过渡
+[代码](https://github.com/BnuzLeo/vue-start/blob/master/animation/initialized/initialized.html)
+[笔记](https://github.com/BnuzLeo/vue-start/blob/master/animation/initialized/initialized.md)
+- 多个元素过渡
+[代码](https://github.com/BnuzLeo/vue-start/blob/master/animation/mutiple/mutiple_properties.html)
+[笔记](https://github.com/BnuzLeo/vue-start/blob/master/animation/mutiple/mutiple.md)
+- 多个组件过渡
+[代码](https://github.com/BnuzLeo/vue-start/blob/master/animation/mutiple/mutiple_template.html)
+[笔记](https://github.com/BnuzLeo/vue-start/blob/master/animation/mutiple/mutiple.md)

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>初始渲染的过渡</title>
+	<script src="../../libs/vue.js"></script>
+	<style>
+		.custom-appear-class{
+			opacity: 0
+		}
+
+		.custom-appear-active-class{
+			transition: opacity 2s;
+		}
+
+		.custom-appear-to-class{
+			opacity: 1
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<transition appear
+					appear-class="custom-appear-class"
+					appear-to-class="custom-appear-to-class"
+					appear-active-class="custom-appear-active-class"
+					v-on:before-appear="customBeforeAppearHook"
+					v-on:appear="customAppearHook"
+					v-on:after-appear="customAfterAppearHook"
+					v-on:appear-cancelled="customAppearCancelledHook">
+			<div v-if="show">初始渲染的过渡</div>
+		</transition>
+		<button @click="change">Change</button>
+	</div>
+
+	<script>
+		var vm = new Vue({
+			el: '#root',
+			data: {
+				show: true
+			},
+			methods: {
+				customBeforeAppearHook: function(){
+					console.log("customBeforeAppearHook")
+				},
+				customAppearHook: function(){
+					console.log("customAppearHook")
+				},
+				customAfterAppearHook: function(){
+					console.log("customAfterAppearHook")
+				},
+				customAppearCancelledHook: function(){
+					console.log("customAppearCancelledHook")
+				},
+				change: function(){
+					this.show = !this.show
+				}
+			}
+		})
+	</script>
+</body>
+</html>
