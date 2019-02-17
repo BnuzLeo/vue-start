@@ -52,3 +52,12 @@ var vm = new Vue({
 2. 在第二帧：去到fade-enter样式，添加fade-enter-to样式
 3. 在最后一帧： 去除fade-enter-active和fade-enter-to样式
 ```
+- 注意
+```html
+这里有一个需要注意的点：
+fade-enter,fade-enter-active,fade-enter-to的fade其实是transition标签的名字
+<transition name="fade">
+	<div v-show="show">Hello Animation</div>
+</transition>
+如果transition没有名字的话，就要使用v-enter,v-enter-active,v-enter-to
+```
