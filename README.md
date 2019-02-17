@@ -51,3 +51,6 @@
 - 多个组件过渡
 [代码](https://github.com/BnuzLeo/vue-start/blob/master/animation/mutiple/mutiple_template.html)
 [笔记](https://github.com/BnuzLeo/vue-start/blob/master/animation/mutiple/mutiple.md)
+- 列表过渡
+[代码](https://github.com/BnuzLeo/vue-start/blob/master/animation/list_transition/list_transition.html)
+[笔记](https://github.com/BnuzLeo/vue-start/blob/master/animation/list_transition/list_transition.md)

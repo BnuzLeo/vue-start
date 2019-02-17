@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>列表过渡</title>
+	<script src="../../libs/vue.js"></script>
+
+	<style>
+		.v-enter{
+			opacity: 0;
+		}
+
+		.v-enter-active{
+			transition: opacity 2s
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<transition-group mode="out-in">
+		  <div v-for="item in items" :key="item.id">
+		  	<div>{{item.name}}</div>	
+		  </div>
+		</transition-group>
+		<button @click="add">Add</button>
+	</div>
+
+	<script>
+		var count = 0;
+
+		var vm = new Vue({
+			el: '#root',
+			data: {
+				items: []
+			},
+			methods: {
+				add: function(){
+					this.items.push({
+						id: count++,
+						name: 'Hello list transition'
+					});
+				}
+			}
+		})
+	</script>
+</body>
+</html>
